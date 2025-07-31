@@ -44,5 +44,6 @@ class UserViewSet(viewsets.ViewSet):
         user=request.user
         return Response({
             'username' : user.username,
-            'email' : user.email
+            'email' : user.email,
+            'is_superadmin' : user.is_staff
         })

@@ -1,10 +1,12 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import api from '../../utils/axios';
 import Cookies from 'js-cookie';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const AuthContext = createContext();
 
 export const useAuth = () => {
+
   const context = useContext(AuthContext);
   if (!context) {
     throw new Error('useAuth must be used within an AuthProvider');
@@ -15,6 +17,7 @@ export const useAuth = () => {
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate()
 
   // Initialize auth token from cookies
   useEffect(() => {
@@ -30,6 +33,9 @@ export const AuthProvider = ({ children }) => {
     try {
       const response = await api.get('/users/me/');
       setUser(response.data);
+      if (response.data.is_superadmin){
+        navigate('admin/dashboard')
+      }
     } catch (error) {
       console.error('Error fetching user profile:', error);
       // If token is invalid, clear it
