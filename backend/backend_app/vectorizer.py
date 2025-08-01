@@ -20,7 +20,6 @@ def combine_user_with_search(user_data):
         combined_vector = uservector + search_vector
     else:
         combined_vector = uservector
-
     return combined_vector
 
 
@@ -28,6 +27,7 @@ def vectorize_data(df):
     uservectors = []
     for _, user in df.iterrows():
         uservector= combine_user_with_search(user)
+        # print(uservector)
         uservectors.append(uservector)
-    return uservector
+    return uservectors
 

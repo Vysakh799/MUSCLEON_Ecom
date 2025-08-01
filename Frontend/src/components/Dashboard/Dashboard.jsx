@@ -9,66 +9,382 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-5">
-      <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
-            Welcome to MUSCLEON E-commerce
-          </h1>
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <span className="text-gray-600 text-lg">
-              Hello, {user?.username}!
-            </span>
-            <button 
-              onClick={handleLogout} 
-              className="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200 hover:shadow-md"
+  <>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="" />
+  <link
+    rel="stylesheet"
+    as="style"
+    onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?display=swap&family=Lexend%3Awght%40400%3B500%3B700%3B900&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+  />
+  <title>Stitch Design</title>
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+  <div
+    className="relative flex size-full min-h-screen flex-col bg-[#221112] dark group/design-root overflow-x-hidden"
+    style={{ fontFamily: 'Lexend, "Noto Sans", sans-serif' }}
+  >
+    <div className="layout-container flex h-full grow flex-col">
+      <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#472426] px-10 py-3">
+        <div className="flex items-center gap-4 text-white">
+          <div className="size-4">
+            <svg
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              Logout
+              <path
+                d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <h2 className="text-white text-lg font-bold leading-tight tracking-[-0.015em]">
+            Muscleon
+          </h2>
+        </div>
+        <div className="flex flex-1 justify-end gap-8">
+          <div className="flex items-center gap-9">
+            <a
+              className="text-white text-sm font-medium leading-normal"
+              href="#"
+            >
+              New Arrivals
+            </a>
+            <a
+              className="text-white text-sm font-medium leading-normal"
+              href="#"
+            >
+              Best Sellers
+            </a>
+            <a
+              className="text-white text-sm font-medium leading-normal"
+              href="#"
+            >
+              Proteins
+            </a>
+            <a
+              className="text-white text-sm font-medium leading-normal"
+              href="#"
+            >
+              Creatine
+            </a>
+            <a
+              className="text-white text-sm font-medium leading-normal"
+              href="#"
+            >
+              Wellness
+            </a>
+            <a
+              className="text-white text-sm font-medium leading-normal"
+              href="#"
+            >
+              Accessories
+            </a>
+          </div>
+          <div className="flex gap-2">
+            <button className="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#472426] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+              <div
+                className="text-white"
+                data-icon="MagnifyingGlass"
+                data-size="20px"
+                data-weight="regular"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                >
+                  <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z" />
+                </svg>
+              </div>
             </button>
+            <button className="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#472426] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+              <div
+                className="text-white"
+                data-icon="User"
+                data-size="20px"
+                data-weight="regular"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                >
+                  <path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z" />
+                </svg>
+              </div>
+            </button>
+            <button className="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#472426] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+              <div
+                className="text-white"
+                data-icon="ShoppingBag"
+                data-size="20px"
+                data-weight="regular"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20px"
+                  height="20px"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                >
+                  <path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z" />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </header>
+      <div className="px-40 flex flex-1 justify-center py-5">
+        <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
+          <div className="@container">
+            <div className="@[480px]:p-4">
+              <div
+                className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-start justify-end px-4 pb-10 @[480px]:px-10"
+                style={{
+                  backgroundImage:
+                    'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-McqeLn9PIKDj9c9IY8S73wwy47Rih5QX69NIRW14YRO9-wzeVtNzwD1VeOuBMYCJs1Rkspp87oB-GwtXeDlTbQnMYlXCnGjhKgO1ev0NE4FpuCIfKfn6w4euGaN10iZlPB9SVsBcyeeSt10Ed3RYqljWGyk6Teogpi5kU_WEabvEy_fTlIFHjya7zZKxkcpuy0-4TYiNjTojSfaUKv7IU9H_TKTBKSveZUo2kGKspdLoWDQLWjT-rs0iuhhR2lt1iQ5v8WDVyWw")'
+                }}
+              >
+                <div className="flex flex-col gap-2 text-left">
+                  <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                    Unleash Your Inner Strength
+                  </h1>
+                  <h2 className="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                    Fuel your fitness journey with Muscleon's premium
+                    supplements. Elevate your performance and achieve your
+                    goals.
+                  </h2>
+                </div>
+                <div className="flex-wrap gap-3 flex">
+                  <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#e92932] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+                    <span className="truncate">Shop Now</span>
+                  </button>
+                  <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#472426] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+                    <span className="truncate">Explore Products</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2 className="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+            Featured Products
+          </h2>
+          <div className="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="flex items-stretch p-4 gap-3">
+              <div className="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                <div
+                  className="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg flex flex-col"
+                  style={{
+                    backgroundImage:
+                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDlzqV7-uCm7k9TIe7HOW3N4Eo8JCyzcbgm-KEtm8y9YFzbSoNLSeqZT9urIbcJbXvjOUaQcyVB4CLQ2H3XmodfRahZFQIw8ST-KyLnLfHgm5L5TNtC8UVLtNjsz2voTz-ZC0o8MmeOCk-aTFk_Rw4ZPEcOB-XuiWxl66UFS3QFcg4RcOvD3Gqh7F2D9ArEoiW6DPx18cVY3OCAQzJf3S8QRwnApoK0hIIFPy4B1q2pOhjdO3rbC3Fyn0H3oMSgprYVDAN4kc6UPBk")'
+                  }}
+                />
+                <div>
+                  <p className="text-white text-base font-medium leading-normal">
+                    Muscleon Whey Protein
+                  </p>
+                  <p className="text-[#c89295] text-sm font-normal leading-normal">
+                    High-quality protein for muscle growth
+                  </p>
+                </div>
+              </div>
+              <div className="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                <div
+                  className="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg flex flex-col"
+                  style={{
+                    backgroundImage:
+                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzbM3lE8bivCwMacbt7VqroHjglSJ0fnlqopfemIzJWk3BFp7oUF9U8SWXsFiAb1bqt_yRxveRDdQeJESg9ayPtGuenbPxSowCx2nQNnZ_ljNqXxK0xh2xaBJLgA0PXnzg9KY7a3swYYqOcij75jwGV6KmdYa4uCTs8ciUetWj3N-oKYmcMA0U_tit01iWKMDtEkYtSm5-99mllPF684KXOjylSY5EEaPrRvUD2n1hhu1jykAABwSZyXDCIBNcOoUGLGG2LbogCoA")'
+                  }}
+                />
+                <div>
+                  <p className="text-white text-base font-medium leading-normal">
+                    Muscleon Creatine Monohydrate
+                  </p>
+                  <p className="text-[#c89295] text-sm font-normal leading-normal">
+                    Enhances strength and power
+                  </p>
+                </div>
+              </div>
+              <div className="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                <div
+                  className="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg flex flex-col"
+                  style={{
+                    backgroundImage:
+                      'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDEirwfTs0fVeXQXAI_KJ9IYrnB4an_mKe15od-LcLzjobScCrvh_OWscmnYwcSxOr13jw1jY40MW0QqSIz5wsAdVFaKTa2jROPrRcBectkD5TQ7x90OU2vlJUgEHJ1_8TshVRk2hzAYB5AmNyyy_vFeRecDuvxo8KNY3Zw3jrgY6Atun8P0MLAyDZxJwy1Ig2RNy4b5wv4BPTzV51kvj82iTynDXxHfUs3lHd0RgXMReNfdHJP9teNbKX22g02pMz3yZqLKkfXPLg")'
+                  }}
+                />
+                <div>
+                  <p className="text-white text-base font-medium leading-normal">
+                    Muscleon Wellness Blend
+                  </p>
+                  <p className="text-[#c89295] text-sm font-normal leading-normal">
+                    Supports overall health and well-being
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2 className="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+            Shop by Category
+          </h2>
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+            <div className="flex flex-col gap-3 pb-3">
+              <div
+                className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                style={{
+                  backgroundImage:
+                    'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDXpUe3cP1qP0a02KMvn2FHrA-EbMpOXOXt9YlYIoEM2qaAxMaA8mQdcpxbaO7WI-QlIYvoQ60YIR-I-4KmrEXZrXcaeIF2IQBkguYreT1nLR1rRK5FSqF6G-J8QCRo5E1vtyVpclVo2DW1QOhdN8UaLFghwXljdkamcQx5945edhusrqTi4XfItNNXiXc52lGRoCsG0SY5I-qFEHmmG_TwBp0A1ZO86AgAxpYobkDkAeNcZS9sghwL8ZyLpecY0IGYZQ2xvniBWqs")'
+                }}
+              />
+              <p className="text-white text-base font-medium leading-normal">
+                Proteins
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 pb-3">
+              <div
+                className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                style={{
+                  backgroundImage:
+                    'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkleCp7HOGMHw8ppYkVyAjAVMIGmSRATWdYqHb1_haWFgD_Vt-ofNYJgLhzPK_0YFmyRXehwYgTmnsrxUOjLrM_ny-uLMo9OEJkxan-IVJcb5ocOvHbjbaS2Kxy7vbdPk8exLvRP27imMmSCj7wZ2c5P3amSmSVYc3MLo7ywWhrpHjdUWsEWWfC1TNJdjT56xPTCI9WZuZJOw_1dhLBY_zB5vDkk_UoVQjJ7A84OnTDwhS-NMiB1xmekIQA7ZDfo_WigpZoAgA2AM")'
+                }}
+              />
+              <p className="text-white text-base font-medium leading-normal">
+                Creatine
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 pb-3">
+              <div
+                className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                style={{
+                  backgroundImage:
+                    'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcSrkMQ-3pdD6w9FbaUC41fEQ86z56GGYzBLnUbsgNxruTdt4EkP4CvxrDp2U2k14PWw2oKmkgrcJ-sFnx3V2h2vLeENr-2MC6-L9lbPN_kxHAKg5D2hCQLexSjaVcqv4-fC1PJl-SD5kpkCoy7_C6jglRzOJzFG-FEOLp-Q1jtpE2jteWiPNIooQuxIRhuV7zONt0sLlkCkn65JpI_ZKf98C4bt4A3rSGhT5m-8I2sB3NUKHisGvRhzd_qmFqIN0mT--qs8xMiHQ")'
+                }}
+              />
+              <p className="text-white text-base font-medium leading-normal">
+                Wellness
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 pb-3">
+              <div
+                className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                style={{
+                  backgroundImage:
+                    'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCWQdp5Brfy0yBvfl_E-m2Wct9iRD3rEZE7QD_hOpUWvBfhHRFNa6se2PoFy1fOwxJN8Z3MJ7pQ8xXtoC58lVh2XxTeRPOVA5_yrQiTcXucebIxHc-gK7J59xls-Mhy6ti-g8Rd-cUexii9PcsykHSZ9Umo02fgPUV7y7KUG5WbBKFi0c89vjQujJsfpFZ0Kdndtt-4m1yFp3clgl_ooIWgn3KvX1YO5S2T-bxR7NJVZBd95ta7Yg876FTkNrppp8bHtnolUhJqBSo")'
+                }}
+              />
+              <p className="text-white text-base font-medium leading-normal">
+                Accessories
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 hover:-translate-y-1">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6 pb-3 border-b-2 border-primary-500">
-            User Profile
-          </h2>
-          <div className="space-y-3">
-            <p className="text-gray-600">
-              <span className="font-semibold text-gray-800">Username:</span> {user?.username}
+      <footer className="flex justify-center">
+        <div className="flex max-w-[960px] flex-1 flex-col">
+          <footer className="flex flex-col gap-6 px-5 py-10 text-center @container">
+            <div className="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+              <a
+                className="text-[#c89295] text-base font-normal leading-normal min-w-40"
+                href="#"
+              >
+                About Us
+              </a>
+              <a
+                className="text-[#c89295] text-base font-normal leading-normal min-w-40"
+                href="#"
+              >
+                Contact
+              </a>
+              <a
+                className="text-[#c89295] text-base font-normal leading-normal min-w-40"
+                href="#"
+              >
+                FAQ
+              </a>
+              <a
+                className="text-[#c89295] text-base font-normal leading-normal min-w-40"
+                href="#"
+              >
+                Privacy Policy
+              </a>
+              <a
+                className="text-[#c89295] text-base font-normal leading-normal min-w-40"
+                href="#"
+              >
+                Terms of Service
+              </a>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a href="#">
+                <div
+                  className="text-[#c89295]"
+                  data-icon="FacebookLogo"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24px"
+                    height="24px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z" />
+                  </svg>
+                </div>
+              </a>
+              <a href="#">
+                <div
+                  className="text-[#c89295]"
+                  data-icon="TwitterLogo"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24px"
+                    height="24px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z" />
+                  </svg>
+                </div>
+              </a>
+              <a href="#">
+                <div
+                  className="text-[#c89295]"
+                  data-icon="InstagramLogo"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24px"
+                    height="24px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z" />
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <p className="text-[#c89295] text-base font-normal leading-normal">
+              @2024 Muscleon. All rights reserved.
             </p>
-            <p className="text-gray-600">
-              <span className="font-semibold text-gray-800">Email:</span> {user?.email}
-            </p>
-          </div>
+          </footer>
         </div>
-        
-        <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 hover:-translate-y-1">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6 pb-3 border-b-2 border-primary-500">
-            Quick Actions
-          </h2>
-          <div className="space-y-4">
-            <button className="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-4 px-6 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:translate-x-1 text-left">
-              Browse Products
-            </button>
-            <button className="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-4 px-6 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:translate-x-1 text-left">
-              View Orders
-            </button>
-            <button className="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-4 px-6 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:translate-x-1 text-left">
-              Account Settings
-            </button>
-          </div>
-        </div>
-        
-        <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 hover:-translate-y-1 md:col-span-2 lg:col-span-1">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6 pb-3 border-b-2 border-primary-500">
-            Recent Activity
-          </h2>
-          <p className="text-gray-600">No recent activity to display.</p>
-        </div>
-      </div>
+      </footer>
     </div>
+  </div>
+</>
+
   );
 };
 

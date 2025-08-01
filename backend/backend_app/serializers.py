@@ -18,6 +18,7 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         user = CustomUser(**validated_data)
         user.set_password(validated_data['password'])
         user.save()
+        print('added')
 
         user_data = [{
             'user_id' : user.id,
@@ -26,7 +27,12 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
         }]
         df = pd.DataFrame(user_data)
         user_vectores = vectorize_data(df)
+        # print("===========")
+        # print(user_vectores)
+        # print("===========")
+
         user.vector_user = json.dumps(user_vectores[0].tolist())
+        # print(user.vector_user)
         user.save()
         return user
 class UserLoginSerializer(serializers.Serializer):

@@ -33,9 +33,9 @@ export const AuthProvider = ({ children }) => {
     try {
       const response = await api.get('/users/me/');
       setUser(response.data);
-      if (response.data.is_superadmin){
-        navigate('admin/dashboard')
-      }
+      // if (response.data.is_seller){
+      //   navigate('/admin/dashboard')
+      // }
     } catch (error) {
       console.error('Error fetching user profile:', error);
       // If token is invalid, clear it

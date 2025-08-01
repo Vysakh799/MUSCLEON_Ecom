@@ -35,13 +35,13 @@ const AdminRoute = ({ children }) => {
     );
   }
 
-  return user && user.is_superadmin ? children : <Navigate to="/dashboard" replace />;
+  return user && user.is_seller ? children : <Navigate to="/dashboard" replace />;
 };
 
 // Public Route Component (redirects to dashboard if already authenticated)
 const PublicRoute = ({ children }) => {
   const { isAuthenticated, user, loading } = useAuth();
-
+  console.log(user)
   if (loading) {
     return (
       <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-br from-primary-500 to-secondary-500 text-white">
@@ -52,7 +52,7 @@ const PublicRoute = ({ children }) => {
   }
 
   if (isAuthenticated) {
-    if (user && user.is_superadmin) {
+    if (user && user.is_seller) {
       return <Navigate to="/admin/dashboard" replace />;
     }
     return <Navigate to="/dashboard" replace />;

@@ -104,6 +104,16 @@ const Register = ({ onRegisterSuccess, switchToLogin }) => {
               {errors.general}
             </div>
           )}
+          {/* <div className="space-y-2 flex justify-evenly items-center">
+            <div className="customer bg-red-100">
+                <label htmlFor="customer">Customer</label>
+                <input type="radio" name="is_seller" id="customer" defaultChecked />
+            </div>
+            <div className="seller">
+              <label htmlFor="seller">Seller</label>
+            <input type="radio" name="is_seller" id="seller" />
+            </div>
+          </div> */}
           
           <div className="space-y-2">
             <label htmlFor="username" className="block text-sm font-medium text-gray-700">
