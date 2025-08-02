@@ -30,7 +30,7 @@ const AuthPage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-primary-500 to-secondary-500 p-5">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br">
       {successMessage && (
         <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-blue-50 border border-blue-200 text-blue-700 px-6 py-4 rounded-lg text-center text-sm shadow-lg z-50 max-w-md">
           {successMessage}

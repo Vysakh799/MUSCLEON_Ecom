@@ -75,9 +75,9 @@ const AppContent = () => {
         <Route
           path="/dashboard"
           element={
-            <ProtectedRoute>
+
               <Dashboard />
-            </ProtectedRoute>
+
           }
         />
         <Route
@@ -88,7 +88,7 @@ const AppContent = () => {
             </AdminRoute>
           }
         />
-        <Route path="/" element={<Navigate to="/auth" replace />} />
+        <Route path="/" element={<Navigate to="/dashboard" replace />} />
       </Routes>
 
   );
